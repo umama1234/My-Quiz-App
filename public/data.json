@@ -1,0 +1,30 @@
+{
+    "questions": [
+      {
+        "question": "Which country borders France to the north?",
+        "options": ["Italy", "Spain", "Belgium", "Germany"],
+        "answer": "Belgium"
+      },
+      {
+        "question": "Which country is south of Canada?",
+        "options": ["USA", "Mexico", "Greenland", "Russia"],
+        "answer": "USA"
+      },
+      {
+        "question": "What is the capital of Australia?",
+        "options": ["Sydney", "Canberra", "Melbourne", "Brisbane"],
+        "answer": "Canberra"
+      },
+      {
+        "question": "Which country has the Great Wall?",
+        "options": ["China", "Japan", "India", "Mongolia"],
+        "answer": "China"
+      },
+      {
+        "question": "What country is known for tulips and windmills?",
+        "options": ["Netherlands", "Sweden", "Germany", "Denmark"],
+        "answer": "Netherlands"
+      }
+    ]
+  }
+  
