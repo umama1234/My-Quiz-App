@@ -3,12 +3,11 @@ import React, { useState, useEffect } from "react";
 import data from "../../public/data.json";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
-function Card() {
+function Card() {         
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState(30);
-  const [showRestart, setShowRestart] = useState(false);
 
   const questions = data.questions;
   const currentQuestion = questions[questionIndex];
@@ -37,8 +36,6 @@ function Card() {
       setQuestionIndex(questionIndex + 1);
       setSelectedOption(null);
       setTimer(30);
-    } else {
-      setShowRestart(true);
     }
   };
 
@@ -48,7 +45,6 @@ function Card() {
     setScore(0);
     setSelectedOption(null);
     setTimer(30);
-    setShowRestart(false);
   };
 
   return (
@@ -100,7 +96,7 @@ function Card() {
       </div>
 
       {/* Next / Restart Button */}
-      {showRestart ? (
+      {questionIndex === questions.length - 1 && selectedOption ? (
         <button
           className="mt-6 w-full bg-red-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-red-700"
           onClick={handleRestart}
@@ -108,7 +104,7 @@ function Card() {
           Restart Quiz
         </button>
       ) : (
-        selectedOption && questionIndex < questions.length - 1 && (
+        selectedOption && questionIndex < questions.length -1 && (
           <button
             className="mt-6 w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-700"
             onClick={handleNext}
